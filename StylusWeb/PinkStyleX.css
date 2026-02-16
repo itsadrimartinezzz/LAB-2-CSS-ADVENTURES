@@ -1,0 +1,89 @@
+/* Fondo  */
+html, body {
+  background: #ffe6f2 !important;
+}
+
+/* Para que los Tweets aparezcan con blanco y como fucsia */
+[data-testid="cellInnerDiv"],
+[data-testid="tweet"],
+article {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(255, 105, 180, 0.31) !important;
+  border-radius: 18px !important;
+  margin: 10px 0 !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+
+/* Botón de post */
+[data-testid="tweetButtonInline"],
+[data-testid="tweetButton"],
+[role="button"][data-testid="SideNav_NewTweet_Button"] {
+  background: #ff4da6 !important;
+  background-color: #ff4da6 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  border: none !important;
+}
+
+
+/* Inputs */
+input, textarea {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 105, 180, 0.45) !important;
+  border-radius: 12px !important;
+  color: #3a0a2a !important;
+}
+
+button, [role="button"], a {
+  transition: transform 0.15s ease, filter 0.15s ease !important;
+}
+button:hover, [role="button"]:hover, a:hover {
+  transform: scale(1.02) !important;
+  filter: brightness(1.05) !important;
+}
+
+/* Para que el botón seguir sea rosa con letra blanca */
+[data-testid$="-follow"],
+[data-testid*="follow"] {
+  background: #ff4da6 !important;
+  background-color: #ff4da6 !important;
+  border: none !important;
+  border-radius: 999px !important;
+}
+
+[data-testid$="-follow"] *,
+[data-testid*="follow"] * {
+  color: #ffffff !important;
+}
+
+/* Para que el boton de postear tenga rosado y blanco*/
+[data-testid$="-SideNav_NewTweet_Button"],
+[data-testid*="SideNav_NewTweet_Button"]{
+  background: #ff4da6 !important;
+  background-color: #ff4da6 !important;
+  border: none !important;
+  border-radius: 999px !important;
+}
+
+/*  Partículas flotando en la pantalla  */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+
+ /* Puntitos  */
+  background: radial-gradient(circle, rgba(255, 77, 166, 0.8) 0 2px, transparent 3px);
+  background-size: 80px 80px;
+
+/* Animación de que se mueven en toda la Pantalla */
+  animation: puntos 10s linear infinite;
+}
+
+/* Movimiento */
+@keyframes puntos {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(-200px, -200px); }
+}
